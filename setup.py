@@ -16,4 +16,6 @@ setup(
     entry_points={"pytest11": ["subinterpreter = pytest_subinterpreter.plugin"]},
     # custom PyPI classifier for pytest plugins
     classifiers=["Framework :: Pytest"],
+    url="https://github.com/tonybaloney/pytest-subinterpreter",
+    author="Anthony Shaw",
 )
