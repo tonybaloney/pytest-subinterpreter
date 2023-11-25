@@ -14,7 +14,6 @@ def pytest_addoption(parser):
 def wrap_pytest():
     # args: tuple[str], plugins: tuple[str]
     import sys
-    from pytest_subinterpreter.faulthandler import FaultHandler
 
     from _pytest.main import wrap_session, _main
     from _pytest.config import get_config
@@ -23,6 +22,8 @@ def wrap_pytest():
     config.parse(list(args))
 
     # The CPython faulthandler isn't supported, patch it with a dummy.
+    # Pytest requires that you import the module after importing pytest things.
+    from pytest_subinterpreter.faulthandler import FaultHandler
     sys.modules["faulthandler"] = FaultHandler()
 
     wrap_session(config, _main)

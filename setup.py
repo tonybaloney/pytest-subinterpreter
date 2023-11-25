@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="pytest-subinterpreter",
-    version="0.0.1",
+    version="0.0.2",
     description="Run pytest in a subinterpreter",
     long_description=long_description,
     packages=["pytest_subinterpreter"],
