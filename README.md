@@ -20,5 +20,15 @@ The extension arguments are:
 - `--interpreter-per` Defaults to `session` (also the only option at the moment).
 
 ```console
-pytest  tests/test_simple.py 
+$ pytest tests/test_simple.py
+============================================================================== test session starts ===============================================================================
+platform darwin -- Python 3.13.0a1+, pytest-7.4.3, pluggy-1.3.0
+rootdir: /Users/anthonyshaw/projects/pytest-subinterpreter
+plugins: subinterpreter-0.0.0
+collected 1 item                                                                                                                                                                 
+
+tests/test_simple.py .                                                                                                                                                     [100%]
+
+=============================================================================== 1 passed in 0.02s ================================================================================
+
 ```
