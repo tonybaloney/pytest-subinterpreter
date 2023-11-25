@@ -1,0 +1,6 @@
+include pytest_subinterpreter
+include LICENSE
+include README.md
+include setup.py
+global-exclude *.py[cod]
+global-exclude __pycache__
